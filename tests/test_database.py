@@ -6,7 +6,7 @@ import pytest
 # Use a test database
 os.environ["ZENITH_TEST_MODE"] = "1"
 
-from src.zenith.database.connection import get_database_path, get_connection
+from src.zenith.database.connection import get_database_path
 from src.zenith.database.schema import initialize_database
 from src.zenith.database import (
     create_account,
