@@ -19,8 +19,8 @@ COPY main.py .
 # Create data directory for SQLite
 RUN mkdir -p data
 
-# Expose the default FastMCP port
-EXPOSE 8000
+# Expose default HTTP port
+EXPOSE 80
 
 # Run server
 CMD ["uv", "run", "python", "main.py"]
