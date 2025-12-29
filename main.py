@@ -1,6 +1,7 @@
-def main():
-    print("Hello from zenith!")
+"""Entry point for the Banking MCP Server."""
+
+from src.zenith.server import mcp
 
 
 if __name__ == "__main__":
-    main()
+    mcp.run(transport="sse")
