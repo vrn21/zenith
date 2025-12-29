@@ -10,3 +10,4 @@ tests/
 REQS.md
 README.md
 data/
+uv.lock

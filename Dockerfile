@@ -9,8 +9,8 @@ RUN pip install uv
 COPY pyproject.toml .
 # COPY uv.lock .
 
-# Install dependencies
-RUN uv sync --frozen --no-dev
+# Install dependencies (generates uv.lock during build)
+RUN uv sync --no-dev
 
 # Copy source code
 COPY src/ src/
