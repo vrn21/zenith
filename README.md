@@ -56,3 +56,16 @@ uv run pytest tests/ -v    # 16 tests (database + server tools)
 - Invalid account ID → `{"error": "Account not found"}`
 - Insufficient funds → `{"error": "Insufficient funds", "balance": X, "requested": Y}`
 - Invalid amount → `{"error": "Amount must be positive"}`
+
+## Docker Deployment
+
+```bash
+# Build and run
+docker compose up -d
+
+# Or manually
+docker build -t zenith-banking .
+docker run -p 8000:8000 -v ./data:/app/data zenith-banking
+```
+
+Server accessible at `http://localhost:8000`

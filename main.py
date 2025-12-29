@@ -1,7 +1,13 @@
 """Entry point for the Banking MCP Server."""
 
+import os
+
 from src.zenith.server import mcp
 
 
 if __name__ == "__main__":
-    mcp.run(transport="sse")
+    host = os.getenv("HOST", "0.0.0.0")
+    port = int(os.getenv("PORT", "8000"))
+    
+    mcp.run(transport="sse", host=host, port=port)
+
